@@ -39,7 +39,9 @@ arr.push(i)
     ];
     const userid=3
     const user=users.find(u=>u.id==userid)
-    id.innerHTML= `ID ${userid} olan istifadeci :${username}`
- </script>
+
+  id.innerHTML = (user) ? `ID ${userid} olan istifadəçi: ${user.name}`: `ID ${userid} olan istifadəçi tapılmadı.`;
+
+</script>
 </body>
 </html>
