@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" id="soz">
+
+  <button onclick="sozudeyis()">OK</button>
+    <p id="netice"></p>
+ <h1>1.Element  arasinda  5-ə bölünəni tap</h1>   
+ <p id="sira"></p>
+ <h1>3.Array Obyekt Axtarmaq(ID ile tapmaq)</h1>
+ <p id="id"></p>
+ <script>
+    const sira=document.getElementById('sira')
+        function sozudeyis(){
+           const netice=document.getElementById('netice')
+               const soz=document.getElementById('soz').value
+            
+ let ters=soz.split('').reverse().join('')
+ netice.innerHTML=ters
+}
+     let arr=[]
+    for(let i=5;i<=100;i++){
+      if(i %5==0)  {
+arr.push(i)
+      }
+    }
+    sira.innerHTML="5ə bölünən "+arr
+
+    const id=document.getElementById('id')
+    const users=[
+{id:1,name:"John"},
+{id:2,name:"Sabina"},
+{id:3,name:"Alice"}
+    ];
+    const userid=3
+    const user=users.find(u=>u.id==userid)
+    id.innerHTML= `ID ${userid} olan istifadeci :${username}`
+ </script>
+</body>
+</html>
